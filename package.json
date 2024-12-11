@@ -1,0 +1,26 @@
+{
+  "name": "acgcard",
+  "version": "1.0.0",
+  "description": "ACGcard",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkchara/ACGcard.git"
+  },
+  "keywords": [
+    "card"
+  ],
+  "author": "kkchara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkchara/ACGcard/issues"
+  },
+  "homepage": "https://github.com/kkchara/ACGcard#readme"
+}
