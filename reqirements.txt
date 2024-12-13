@@ -1,2 +1,0 @@
-sharp
-svg.js

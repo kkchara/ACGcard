@@ -1,7 +1,7 @@
-### hello
+### 在任何地方引用一张自己的ACG数据摘要小卡片O(∩_∩)O
 ## like this:
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)
+![maimai rating](https://acg-card.vercel.app/api/maimai?name=)
 
 ## platform:
 
