@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/kkchara/ACGcard/issues"
   },
-  "homepage": "https://github.com/kkchara/ACGcard#readme"
+  "homepage": "https://github.com/kkchara/ACGcard#readme",
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.2.4",
+    "sharp": "^0.33.5"
+  }
 }

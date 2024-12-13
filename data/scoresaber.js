@@ -20,7 +20,5 @@ function getSsScore(player, page) {
         console.error(`请求遇到问题: ${e.message}`);
     });
 }
-
-// 示例调用
 getSsScore('76561199085587690', '1');
 // debugger;
