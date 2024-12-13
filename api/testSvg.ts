@@ -19,7 +19,7 @@ export default function handler(
 
     <circle cx="100" cy="100" r="50" fill="red" />
     <rect x="50" y="50" width="100" height="50" rx="5" ry="5" fill="blue" />
-    <text x="100" y="100" font-size="24" fill="white" stroke="red" text-anchor="middle">你是${name}</text>
+    <text x="100" y="100" font-size="24" fill="white" stroke="red" text-anchor="middle">我猜你是${name}</text>
     
     </svg>
   `;
