@@ -9,7 +9,7 @@ export default async function handler(
 ): Promise<void> {
   try {
     const userid = req.query.userid || '76561199085587690';
-    const color = req.query.color || '#151515'
+    const color = req.query.color
 
     const response = await fetch(`https://scoresaber.com/api/player/${userid}/full`);
     
