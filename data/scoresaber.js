@@ -1,7 +1,7 @@
 const https = require('https');
 
-function getSsScore(player, page) {
-    const url = `https://scoresaber.com/api/player/${player}/scores?page=${page}&sort=top`;
+function getSsScore(userid) {
+    const url = `https://scoresaber.com/api/player/${userid}/full`;
 
     https.get(url, (res) => {
         let data = '';
@@ -14,11 +14,11 @@ function getSsScore(player, page) {
         // 数据接收完毕
         res.on('end', () => {
             const ssJson = JSON.parse(data);
-            console.log(ssJson["playerScores"][0]["score"]);
+            console.log(ssJson);
         });
     }).on('error', (e) => {
         console.error(`请求遇到问题: ${e.message}`);
     });
 }
-getSsScore('76561199085587690', '1');
+getSsScore('76561199085587690');
 // debugger;
