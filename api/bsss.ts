@@ -1,5 +1,6 @@
 // 节奏光剑 SS平台
 
+import { Color } from '@svgdotjs/svg.js';
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
 export default async function handler(
@@ -8,6 +9,7 @@ export default async function handler(
 ): Promise<void> {
   try {
     const userid = req.query.userid || '76561199085587690';
+    const color = req.query.color || '#151515'
 
     const response = await fetch(`https://scoresaber.com/api/player/${userid}/full`);
     
@@ -139,7 +141,7 @@ export default async function handler(
 
 
 
-        <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="466" fill="#151515"
+        <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" width="466" fill="${color}"
             stroke-opacity="1" />
 
 
@@ -174,7 +176,7 @@ export default async function handler(
                 </svg>
 
                 <text class="stat  bold" x="25" y="12.5">PP :</text>
-                <text class="stat  bold" x="219.01" y="12.5" data-testid="stars">${apiData.pp}</text>
+                <text class="stat  bold" x="219.01" y="12.5" data-testid="stars">${Number(apiData.pp).toFixed(2)}</text>
                 </g>
             </g>
             <g transform="translate(0, 25)">
@@ -222,7 +224,7 @@ export default async function handler(
                 </svg>
 
                 <text class="stat  bold" x="25" y="12.5">平均准度:</text>
-                <text class="stat  bold" x="219.01" y="12.5" data-testid="contribs">${apiData.scoreStats.averageRankedAccuracy}%</text>
+                <text class="stat  bold" x="219.01" y="12.5" data-testid="contribs">${Number(apiData.scoreStats.averageRankedAccuracy).toFixed(2)}%</text>
                 </g>
             </g>
             </svg>
