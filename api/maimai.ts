@@ -8,6 +8,7 @@ export default async function handler(
 ): Promise<void> {
   try {
     const name = req.query.name || 'salt';
+    const color = req.query.color;
 
     const response = await fetch('https://www.diving-fish.com/api/maimaidxprober/query/player', {
       method: 'POST',
@@ -148,7 +149,7 @@ export default async function handler(
 
 
 
-        <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="" width="466" fill="#151515"
+        <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="99%" stroke="" width="466" fill="#${color}"
             stroke-opacity="1" />
 
 

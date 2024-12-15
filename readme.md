@@ -23,7 +23,6 @@
 
 ## 仍在开发中：
 steam
-maimaiDX(2024)
 chunithm(2025)
 osu!
 museDash

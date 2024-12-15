@@ -1,6 +1,6 @@
 {
   "name": "acgcard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ACGcard",
   "main": "index.js",
   "directories": {
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/kkchara/ACGcard.git"
   },
   "keywords": [
-    "card"
+    "card", "ACG", "draw"
   ],
   "author": "kkchara",
   "license": "MIT",
