@@ -14,7 +14,7 @@
 - name：水鱼查分器用户名
 - color：卡片背景颜色，不传参数时默认为无色
 
-### 节奏光剑scoresaber平台：
+### 节奏光剑(scoresaber)：
 
 `https://acg-card.vercel.app/api/bsss`
 
