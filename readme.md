@@ -28,6 +28,7 @@ chunithm(2025)
 osu!
 museDash
 pigrous
+majorsoul
 
 genshin
 WUWA
@@ -40,3 +41,5 @@ valorant
 cod
 minecraft
 terraria
+
+......

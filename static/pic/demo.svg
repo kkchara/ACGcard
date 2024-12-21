@@ -1,62 +1,3 @@
-// 舞萌DX 
-
-import { VercelRequest, VercelResponse } from '@vercel/node';
-
-export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse
-): Promise<void> {
-  try {
-    const name = req.query.name || 'kkchara';
-    const color = req.query.color || '';
-
-    const response = await fetch('https://www.diving-fish.com/api/maimaidxprober/query/player', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-          'username': name
-      })
-    });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const apiData = await response.json();
-
-    const title = `${apiData.nickname} 的 舞萌DX成绩板`;
-    const key1 = "Rating";
-    const data1 = String(apiData.rating);
-    const key2 = "SDb1";
-    try{
-        var data2 = String(apiData.charts.sd[0].title);
-    }catch(e){
-        var data2 = "暂无数据";
-    }
-    const key3 = "SDb2";
-    try{
-        var data3 = String(apiData.charts.sd[1].title);
-    }catch(e){
-        var data3 = "暂无数据";
-    }
-    const key4 = "DXb1";
-    try{
-        var data4 = String(apiData.charts.dx[0].title);
-    }catch(e){
-        var data4 = "暂无数据";
-    }
-    const key5 = "DXb2";
-    try{
-        var data5 = String(apiData.charts.dx[1].title);
-    }catch(e){
-        var data5 = "暂无数据";
-    }
-
-    // console.log(apiData.rating);
-
-    const svgString = `
 <svg width="467" height="195" viewBox="0 0 467 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
   aria-labelledby="descId">
   <title id="titleId"></title>
@@ -263,12 +204,3 @@ export default async function handler(
 
   </g>
 </svg>
-    `;
-
-    res.setHeader('Content-Type', 'image/svg+xml');
-    res.status(200).send(svgString);
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-}
