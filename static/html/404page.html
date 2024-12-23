@@ -11,8 +11,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: #000; /* 背景设置为黑色 */
-            overflow: hidden; /* 防止文字溢出视口 */
+            background: #000;
+            overflow: hidden;
         }
         h1 {
             font-size: 100px;
@@ -20,7 +20,7 @@
             background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
             background-clip: text;
             color: transparent;
-            position: absolute; /* 使用绝对定位来移动文字 */
+            position: absolute;
         }
         @keyframes rotateText {
             0% {
@@ -58,9 +58,9 @@
 
         var h1Element = document.querySelector('h1');
         var rotateTextAnimation = h1Element.style.animation;
-        h1Element.style.animation = 'none'; // 清除动画以重置动画时间
+        h1Element.style.animation = 'none'; 
         requestAnimationFrame(() => {
-            h1Element.style.animation = rotateTextAnimation; // 重新应用动画
+            h1Element.style.animation = rotateTextAnimation;
         });
 
         setInterval(() => {
